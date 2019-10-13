@@ -1,0 +1,11 @@
+:{%PORT%}
+log / stdout "{combined}"
+gzip
+prometheus 0.0.0.0:9090
+root {%ROOT%}
+
+rewrite {
+  regexp .*
+  to {path} /
+}
+
