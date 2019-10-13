@@ -11,7 +11,7 @@ help: ## This help.
 export APP     := sretooling/caddy
 
 # ensure you create an initial commit on your your git.. `git tag 0.0.1 ; git push origin 0.0.1`
-export TAG     := $(shell git describe --tags)
+export TAG     := $(shell git describe --tags --always --dirty)
 export IMG     := "$(APP):$(TAG)"
 
 # DOCKER TASKS
