@@ -40,5 +40,3 @@ RUN find  /app
 ADD Caddyfile /
 
 ENTRYPOINT /caddy -conf /Caddyfile
-
-RUN ls /app
